@@ -2,7 +2,17 @@
 
 This skill needs three env vars to authenticate against your Fluentboards site. Do this once.
 
-## 1. Generate a WordPress Application Password
+## 1. Install the skill
+
+Clone this repository into your agent's skills directory.
+
+**Claude Code** stores skills in `~/.claude/skills/`:
+
+```bash
+git clone git@github.com:HurayraIIT/fluentboards.git ~/.claude/skills/fluentboards
+```
+
+## 2. Generate a WordPress Application Password
 
 1. Sign in to your Fluentboards site: <https://projects.startise.com/wp-admin/profile.php>
 2. Scroll to the **Application Passwords** section at the bottom of the page.
@@ -12,7 +22,7 @@ This skill needs three env vars to authenticate against your Fluentboards site. 
 
 Application Passwords are independent of your regular login password. You can revoke this one at any time from the same page without affecting anything else.
 
-## 2. Add the env vars to your shell
+## 3. Add the env vars to your shell
 
 Pick the snippet that matches your shell. Before pasting, replace `your-wp-username` with your WordPress username and replace the dummy app password with the one you copied in step 1.
 
@@ -44,7 +54,7 @@ EOF
 source ~/.bashrc
 ```
 
-## 3. Verify it works
+## 4. Verify it works
 
 From the same terminal:
 
